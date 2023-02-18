@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+
+}
+
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-size: cover;
+  background-position: bottom;
+}
+
+.banner-content {
+  height: 58rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* animation text here / */
+.animation {
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 1px;
+  display: inline-block;
+  animation: fadeIn 1.5s forwards;
+  opacity: 0;
+  transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.txtCenter {
+  display: inline-block;
+  animation: text-center 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: 1;
+  position: relative;
+  font-weight: 500;
+  font-family: montBold;
+}
+
+/* / TEXT RIGHT / */
+.slideRight {
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.txtRight {
+  font-weight: 100;
+  font-family: montReg;
+  z-index: -1;
+  display: inline-block;
+  animation: text-right 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+/* / KEY FRAME / */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes text-center {
+  0% {
+    transform: translatex(50%);
+  }
+
+  60% {
+    transform: translatex(50%);
+  }
+
+  100% {
+    transform: translatex(0%);
+  }
+}
+
+@keyframes text-right {
+  0% {
+    opacity: 0;
+    transform: translatex(-100%);
+  }
+
+  60% {
+    opacity: 0;
+    transform: translatex(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translatex(0%);
+  }
+}
+
+@font-face {
+  font-family: montBold;
+  src: url(font/Montserrat-Bold.otf);
+}
+
+@font-face {
+  font-family: montReg;
+  src: url(font/Montserrat-Regular.otf);
+}
+
+@font-face {
+  font-family: montLight;
+  src: url(font/Montserrat-Light.otf);
+}
+
+/* / animation text end */
+
+
+#about {
+  background-color: antiquewhite;
+  border-radius: 30px;
+  width: 70rem;
+  height: 23rem;
+  margin-top: 11rem;
+}
+
+.mid {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-size: cover;
+  background-position: bottom;
+  margin-top: 10rem;
+  height: 35rem;
+}
+
+/* card qcb */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background: #17251a;
+}
+
+body .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px 0;
+}
+
+body .container .card {
+  position: relative;
+  min-width: 320px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 30px;
+  transition: 0.5s;
+}
+
+body .container .card:nth-child(1) .box .content a {
+  background: #2196f3;
+}
+
+body .container .card:nth-child(2) .box .content a {
+  background: #e91e63;
+}
+
+body .container .card:nth-child(3) .box .content a {
+  background: #23c186;
+}
+
+body .container .card .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #3c5e44;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+body .container .card .box:hover {
+  transform: translateY(-50px);
+}
+
+body .container .card .box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+body .container .card .box .content {
+  padding: 20px;
+  text-align: center;
+}
+
+body .container .card .box .content h2 {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+body .container .card .box .content h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  z-index: 1;
+  transition: 0.5s;
+  margin-bottom: 15px;
+}
+
+body .container .card .box .content p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+body .container .card .box .content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+
+body .container .card .box .content a:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background: #fff;
+  color: #000;
+}
+
+/* start footer */
+.mb-4 a:hover {
+  background-color: #4b4037;
+  transform: scale(1.1, 1.1)
+}
+
+/* end footer */
